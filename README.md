@@ -1,9 +1,10 @@
 # PPC Converter
 
-This project is aimed at converting PPC files to a more usable format.
-
-## Installation
-Instructions on how to install the project.
-
 ## Usage
-Instructions on how to use the project.
+
+This project is a powerful video converter utilizing FFmpeg. Follow the instructions below to get started.
+
+### Project Info
+- **Name**: PPC Converter
+- **Version**: 1.0.0
+- **Description**: A desktop application for converting videos easily.
