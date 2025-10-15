@@ -58,7 +58,7 @@ if "%HAS_PS%"=="1" (
     "Expand-Archive -Path '%~1' -DestinationPath '%~2' -Force" 2>nul
   if exist "%~2" exit /b 0
 )
-tar -xf "%~1" -C "%~2%" 2>nul
+tar -xf "%~1" -C "%~2" 2>nul
 if exist "%~2" exit /b 0
 exit /b 1
 
@@ -127,7 +127,7 @@ if not exist "%SCRIPT_DIR%input\*.mp4" (
 
 for %%f in ("%SCRIPT_DIR%input\*.mp4") do (
   echo [CONVERT] "%%~nxf" -> "output\%%~nf.avi"
-  "%FFMPEG_CMD%" -y -i "%%f" -c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 160k "output\%%~nf.avi" >> "%LOG_DIR%\ffmpeg.log" 2>&1
+  "%FFMPEG_CMD%" -y -i "%%f" -c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 160k "%SCRIPT_DIR%output\%%~nf.avi" >> "%LOG_DIR%\ffmpeg.log" 2>&1
 )
 
 echo.
