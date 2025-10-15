@@ -1,3 +1,22 @@
-node_modules/
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+logs/*
+!logs/.gitkeep
 *.log
-*.env
+temp/*
+!temp/.gitkeep
+*.tmp
+*.cache
+
+# Binaries (downloaded at runtime)
+binaries/*.exe
+binaries/*.dll
+
+# Not used in this minimal portable setup
+node_modules/
+dist/
+build/
+.env
