@@ -1,1 +1,22 @@
-{"name": "ppc-converter","version": "1.0.0","main": "electron-main.cjs","scripts": {"start": "electron ."},"dependencies": {"electron": "^13.1.0"}}
+{
+  "name": "ppc-converter",
+  "version": "1.0.0",
+  "main": "electron-main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "build": "tsc",
+    "convert": "node dist/cli.js"
+  },
+  "dependencies": {
+    "electron": "^13.1.0",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/ffprobe-static": "^2.0.3",
+    "@types/fluent-ffmpeg": "^2.1.24",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
