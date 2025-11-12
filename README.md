@@ -24,6 +24,27 @@ npm install
 npm run build
 ```
 
+### Rýchle spustenie (Windows)
+
+Pre rýchle spustenie na Windows použite startup skript:
+
+```cmd
+START.bat
+```
+
+Tento skript automaticky:
+- Skontroluje inštaláciu Node.js
+- Nainštaluje závislosti (ak chýbajú)
+- Zostaví TypeScript kód
+- Zobrazí návod na použitie
+
+Môžete ho tiež použiť priamo s video súborom:
+
+```cmd
+START.bat video.mp4
+START.bat video.mp4 output.avi
+```
+
 ## Použitie
 
 ### Konverzia MP4 na AVI
