@@ -4,3 +4,5 @@ node_modules/
 dist/
 *.js.map
 *.d.ts
+sample/*.mp4
+sample/*.avi

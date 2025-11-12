@@ -1,11 +1,15 @@
 import ffmpeg from 'fluent-ffmpeg';
 import ffmpegStatic from 'ffmpeg-static';
+import ffprobeStatic from 'ffprobe-static';
 import * as path from 'path';
 import * as fs from 'fs';
 
-// Set the path to the ffmpeg binary
+// Set the path to the ffmpeg and ffprobe binaries
 if (ffmpegStatic) {
   ffmpeg.setFfmpegPath(ffmpegStatic);
+}
+if (ffprobeStatic && ffprobeStatic.path) {
+  ffmpeg.setFfprobePath(ffprobeStatic.path);
 }
 
 /**

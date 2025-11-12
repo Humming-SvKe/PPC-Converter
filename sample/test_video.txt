@@ -1,2 +1,21 @@
-# Sample Test Video
-This is a sample video file used for testing the PPC Converter.
+# Sample Test Video Directory
+
+This directory contains sample videos for testing the PPC Converter.
+
+## Creating Test Videos
+
+To create a test video for conversion, use the following command:
+
+```bash
+./node_modules/ffmpeg-static/ffmpeg -f lavfi -i testsrc=duration=5:size=320x240:rate=25 -f lavfi -i sine=frequency=1000:duration=5 -pix_fmt yuv420p -c:v libx264 -preset ultrafast sample/test_video.mp4 -y
+```
+
+This will create a 5-second test video with a test pattern and audio tone.
+
+## Testing Conversion
+
+After creating a test video, you can test the conversion with:
+
+```bash
+npm run convert sample/test_video.mp4
+```
